@@ -29,8 +29,6 @@ html(lang='en')
         nav#mainNav.navbar.navbar-expand-lg.bg-secondary.text-uppercase.fixed-top
             .container
                 a.navbar-brand(href='#page-top') DILO CON SPIKOO
-                button.navbar-toggler.text-uppercase.font-weight-bold.bg-primary.text-white.rounded(type='button', data-bs-toggle='collapse', data-bs-target='#navbarResponsive', aria-controls='navbarResponsive', aria-expanded='false', aria-label='Toggle navigation')
-                    | Menu 
                     i.fas.fa-bars
                 #navbarResponsive.collapse.navbar-collapse
         // Masthead
@@ -49,61 +47,48 @@ html(lang='en')
                     .divider-custom-line
 
         // Portfolio Section
-        section#portfolio.page-section.portfolio
+section#portfolio.page-section.portfolio
+    .container
+        // Portfolio Section Heading
+        .divider-custom
+            .divider-custom-line
+            .divider-custom-icon
+                i.fas.fa-star
+            .divider-custom-line
+        // Portfolio Grid Items
+        body.text-center.pb-5
             .container
-                // Portfolio Section Heading
-
-                // Icon Divider
-                .divider-custom
-                    .divider-custom-line
-                    .divider-custom-icon
-                        i.fas.fa-star
-                    .divider-custom-line
-                // Portfolio Grid Items
-                .row.justify-content-center
-                    // Portfolio Item 1
-                    .col-md-6.col-lg-4.mb-5
-                        .portfolio-item.mx-auto(data-bs-toggle='modal', data-bs-target='#portfolioModal1')
-                            .portfolio-item-caption.d-flex.align-items-center.justify-content-center.h-100.w-100
-                                .portfolio-item-caption-content.text-center.text-white
-                                    i.fas.fa-plus.fa-3x
-                            img.img-fluid(src='assets/img/portfolio/WhatsApp Image 2025-04-22 at 5.37.39 PM.jpeg', alt='...')
+        .row.justify-content-center
+            // Portfolio Item 1
+            .col-md-6.col-lg-4.mb-5
+            .portfolio-item-caption.d-flex.align-items-center.justify-content-center.h-100.w-100
+                .portfolio-item.mx-auto(onclick='playSound1()')
+                    img.img-fluid(src='assets/img/portfolio/WhatsApp Image 2025-04-22 at 5.37.39 PM.jpeg', alt='...')
                     // Portfolio Item 2
                     .col-md-6.col-lg-4.mb-5
-                        .portfolio-item.mx-auto(data-bs-toggle='modal', data-bs-target='#portfolioModal2')
-                            .portfolio-item-caption.d-flex.align-items-center.justify-content-center.h-100.w-100
-                                .portfolio-item-caption-content.text-center.text-white
-                                    i.fas.fa-plus.fa-3x
-                            img.img-fluid(src='assets/img/portfolio/sonriente.jpeg', alt='...')
+                    .portfolio-item-caption.d-flex.align-items-center.justify-content-center.h-100.w-100
+                .portfolio-item.mx-auto(onclick='playSound2()')
+                    img.img-fluid(src='assets/img/portfolio/sonriente.jpeg', alt='...')
                     // Portfolio Item 3
                     .col-md-6.col-lg-4.mb-5
-                        .portfolio-item.mx-auto(data-bs-toggle='modal', data-bs-target='#portfolioModal3')
-                            .portfolio-item-caption.d-flex.align-items-center.justify-content-center.h-100.w-100
-                                .portfolio-item-caption-content.text-center.text-white
-                                    i.fas.fa-plus.fa-3x
-                            img.img-fluid(src='assets/img/portfolio/enojado.jpeg', alt='...')
+                    .portfolio-item-caption.d-flex.align-items-center.justify-content-center.h-100.w-100
+                .portfolio-item.mx-auto(onclick='playSound3()')
+                    img.img-fluid(src='assets/img/portfolio/enojado.jpeg', alt='...')
                     // Portfolio Item 4
-                    .col-md-6.col-lg-4.mb-5.mb-lg-0
-                        .portfolio-item.mx-auto(data-bs-toggle='modal', data-bs-target='#portfolioModal4')
-                            .portfolio-item-caption.d-flex.align-items-center.justify-content-center.h-100.w-100
-                                .portfolio-item-caption-content.text-center.text-white
-                                    i.fas.fa-plus.fa-3x
-                            img.img-fluid(src='assets/img/portfolio/triste.jpeg', alt='...')
+                    .col-md-6.col-lg-4.mb-5
+                    .portfolio-item-caption.d-flex.align-items-center.justify-content-center.h-100.w-100
+                .portfolio-item.mx-auto(onclick='playSound4()')
+                    img.img-fluid(src='assets/img/portfolio/triste.jpeg', alt='...')
                     // Portfolio Item 5
-                    .col-md-6.col-lg-4.mb-5.mb-md-0
-                        .portfolio-item.mx-auto(data-bs-toggle='modal', data-bs-target='#portfolioModal5')
-                            .portfolio-item-caption.d-flex.align-items-center.justify-content-center.h-100.w-100
-                                .portfolio-item-caption-content.text-center.text-white
-                                    i.fas.fa-plus.fa-3x
-                            img.img-fluid(src='assets/img/portfolio/asco.jpeg', alt='...')
+                    .col-md-6.col-lg-4.mb-5
+                    .portfolio-item-caption.d-flex.align-items-center.justify-content-center.h-100.w-100
+                .portfolio-item.mx-auto(onclick='playSound5()')
+                    img.img-fluid(src='assets/img/portfolio/asco.jpeg', alt='...')
                     // Portfolio Item 6
-                    .col-md-6.col-lg-4
-                        .portfolio-item.mx-auto(data-bs-toggle='modal', data-bs-target='#portfolioModal6')
-                            .portfolio-item-caption.d-flex.align-items-center.justify-content-center.h-100.w-100
-                                .portfolio-item-caption-content.text-center.text-white
-                                    i.fas.fa-plus.fa-3x
-                            img.img-fluid(src='assets/img/portfolio/miedo.jpeg', alt='...')
-
+                    .col-md-6.col-lg-4.mb-5
+                    .portfolio-item-caption.d-flex.align-items-center.justify-content-center.h-100.w-100
+                .portfolio-item.mx-auto(onclick='playSound6()')
+                    img.img-fluid(src='assets/img/portfolio/miedo.jpeg', alt='...')
         // Footer
         footer.footer.text-center
             .container
@@ -139,3 +124,45 @@ html(lang='en')
         // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
 
         script(src='https://cdn.startbootstrap.com/sb-forms-latest.js')
+
+        // Script para reproducir sonido
+script.
+    function playSound1() {
+        const sound = new Audio('assets/sounds/Audiofeliz.mp3'); // Asegúrate de que esta ruta sea correcta
+        sound.play();
+    }
+
+    // Script para reproducir sonido
+script.
+    function playSound2() {
+        const sound = new Audio('assets/sounds/contento.mp3'); // Asegúrate de que esta ruta sea correcta
+        sound.play();
+    }
+
+    // Script para reproducir sonido
+script.
+    function playSound3() {
+        const sound = new Audio('assets/sounds/enojado.mp3'); // Asegúrate de que esta ruta sea correcta
+        sound.play();
+    }
+
+    // Script para reproducir sonido
+script.
+    function playSound4() {
+        const sound = new Audio('assets/sounds/triste.mp3'); // Asegúrate de que esta ruta sea correcta
+        sound.play();
+    }
+
+    // Script para reproducir sonido
+script.
+    function playSound5() {
+        const sound = new Audio('assets/sounds/asco.mp3'); // Asegúrate de que esta ruta sea correcta
+        sound.play();
+    }
+
+    // Script para reproducir sonido
+script.
+    function playSound6() {
+        const sound = new Audio('assets/sounds/frio.mp3'); // Asegúrate de que esta ruta sea correcta
+        sound.play();
+    }
